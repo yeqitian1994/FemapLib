@@ -1,0 +1,6 @@
+D:\Private\FemapLib\FemapLib\bin\Debug\FemapLib.dll
+D:\Private\FemapLib\FemapLib\bin\Debug\FemapLib.pdb
+D:\Private\FemapLib\FemapLib\obj\Debug\FemapLib.csproj.AssemblyReference.cache
+D:\Private\FemapLib\FemapLib\obj\Debug\FemapLib.csproj.CoreCompileInputs.cache
+D:\Private\FemapLib\FemapLib\obj\Debug\FemapLib.dll
+D:\Private\FemapLib\FemapLib\obj\Debug\FemapLib.pdb
