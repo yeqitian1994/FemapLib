@@ -17,7 +17,7 @@ namespace FemapLib
         public static IList<int> GetAllSolidIDs(model feModel)
         {
             List<int> solidIDs = new List<int>();
-            if (feModel == null) feModel = LibApp.GetDefaultFemapModel();
+            if (feModel == null) feModel = LibApp.GetFemapModel();
             if (feModel != null)
             {
                 Solid solid = feModel.feSolid;
@@ -33,7 +33,7 @@ namespace FemapLib
 
         public static int GetSolidByTitle(string name,model feModel)
         {
-            if (feModel == null) feModel = LibApp.GetDefaultFemapModel();
+            if (feModel == null) feModel = LibApp.GetFemapModel();
             if (feModel != null)
             {
                 Solid solid = feModel.feSolid;
@@ -53,7 +53,7 @@ namespace FemapLib
         public static List<int> GetSurfaceIDsFromSolid(int solidID,model feModel)
         {
             List<int> surfaceIDs = new List<int>();
-            if (feModel == null) feModel = LibApp.GetDefaultFemapModel();
+            if (feModel == null) feModel = LibApp.GetFemapModel();
             if (feModel != null)
             {
                 Solid solid = feModel.feSolid;
@@ -70,7 +70,7 @@ namespace FemapLib
         public static List<int> GetCurveIDsFromSolid(int solidID, model feModel)
         {
             List<int> curveIDs = new List<int>();
-            if (feModel == null) feModel = LibApp.GetDefaultFemapModel();
+            if (feModel == null) feModel = LibApp.GetFemapModel();
             if (feModel != null)
             {
                 Solid solid = feModel.feSolid;

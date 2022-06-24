@@ -10,7 +10,7 @@ namespace FemapLib
 {
     public class LibApp
     {
-        public static model GetDefaultFemapModel()
+        public static model GetFemapModel()
         {
             return Marshal.GetActiveObject("femap.model") as model;
         }
@@ -19,8 +19,6 @@ namespace FemapLib
         {
             return id > 0 && id < 2147483647;
         }
-
-
 
         public static zReturnCode returnCode;
 

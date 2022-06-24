@@ -17,7 +17,7 @@ namespace FemapLib
         public static IList<int> GetAllSurfaceIDs(model feModel)
         {
             List <int> surfaceIDs = new List<int>();
-            if (feModel == null)feModel = LibApp.GetDefaultFemapModel();
+            if (feModel == null)feModel = LibApp.GetFemapModel();
             if (feModel != null)
             {
                 Surface surface= feModel.feSurface;

@@ -12,7 +12,7 @@ namespace FemapLib
         public static bool HasProperty(string title, out int id, model feModel = null)
         {
             id = -1;
-            if (feModel == null) feModel = LibApp.GetDefaultFemapModel();
+            if (feModel == null) feModel = LibApp.GetFemapModel();
             if (feModel != null)
             {
                 Prop prop = feModel.feProp;
@@ -33,7 +33,7 @@ namespace FemapLib
         public static int CreatePlateProperty(string title,int matID,double thickness, model feModel = null)
         {
             int newPropID = -1;
-            if (feModel == null) feModel = LibApp.GetDefaultFemapModel();
+            if (feModel == null) feModel = LibApp.GetFemapModel();
             if (feModel != null)
             {
                 Prop prop = feModel.feProp;
@@ -52,7 +52,7 @@ namespace FemapLib
         public static int CreateBeamProperty(string title, int matID, double thickness, model feModel = null)
         {
             int newPropID = -1;
-            if (feModel == null) feModel = LibApp.GetDefaultFemapModel();
+            if (feModel == null) feModel = LibApp.GetFemapModel();
             if (feModel != null)
             {
                 Prop prop = feModel.feProp;

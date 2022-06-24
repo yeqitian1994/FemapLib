@@ -31,7 +31,7 @@ namespace FemapLib
         {
             if(feModel==null)
             {
-                feModel = LibApp.GetDefaultFemapModel();
+                feModel = LibApp.GetFemapModel();
             }
             if(feModel!=null)
             {
@@ -52,7 +52,7 @@ namespace FemapLib
         /// <param name="feModel"></param>
         public static void WriteSolidInfos(bool writeIDs = true, model feModel = null)
         {
-            if (feModel == null)feModel = LibApp.GetDefaultFemapModel();
+            if (feModel == null)feModel = LibApp.GetFemapModel();
             if (feModel != null)
             {
                 IList<int> solidIDs = LibSoild.GetAllSolidIDs(feModel);
@@ -73,7 +73,7 @@ namespace FemapLib
         /// <param name="feModel"></param>
         public static void WriteSurfaceInfos(bool writeIDs = true, model feModel = null)
         {
-            if (feModel == null) feModel = LibApp.GetDefaultFemapModel();
+            if (feModel == null) feModel = LibApp.GetFemapModel();
             if (feModel != null)
             {
                 IList<int> surfaceIDs = LibSurface.GetAllSurfaceIDs(feModel);
@@ -94,7 +94,7 @@ namespace FemapLib
         /// <param name="feModel"></param>
         public static void WriteCurveInfos(bool writeIDs = true, model feModel = null)
         {
-            if (feModel == null) feModel = LibApp.GetDefaultFemapModel();
+            if (feModel == null) feModel = LibApp.GetFemapModel();
             if (feModel != null)
             {
                 IList<int> curveIDs =LibCurve.GetAllCurveIDs(feModel);
@@ -115,7 +115,7 @@ namespace FemapLib
         /// <param name="feModel">femap model</param>
         public static void WritePointInfos(bool writeDetails = true, model feModel = null)
         {
-            if (feModel == null) feModel = LibApp.GetDefaultFemapModel();
+            if (feModel == null) feModel = LibApp.GetFemapModel();
             if (feModel != null)
             {
                 IList<int> pointIDs =LibPoint.GetAllPointIDs(feModel);

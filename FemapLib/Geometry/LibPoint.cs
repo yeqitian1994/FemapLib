@@ -17,7 +17,7 @@ namespace FemapLib
         public static IList<int> GetAllPointIDs(model feModel)
         {
             List<int> pointIDs = new List<int>();
-            if (feModel == null) feModel = LibApp.GetDefaultFemapModel();
+            if (feModel == null) feModel = LibApp.GetFemapModel();
             if (feModel != null)
             {
                 Point point = feModel.fePoint;

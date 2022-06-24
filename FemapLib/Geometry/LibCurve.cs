@@ -16,7 +16,7 @@ namespace FemapLib
         public static IList<int> GetAllCurveIDs(model feModel)
         {
             List<int> curveIDs = new List<int>();
-            if (feModel == null) feModel = LibApp.GetDefaultFemapModel();
+            if (feModel == null) feModel = LibApp.GetFemapModel();
             if (feModel != null)
             {
                 Curve curve = feModel.feCurve;

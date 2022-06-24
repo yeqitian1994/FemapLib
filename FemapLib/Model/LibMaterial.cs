@@ -9,10 +9,15 @@ namespace FemapLib
 {
     public class LibMaterial
     {
+        /// <summary>
+        /// 获取所有材料的id号
+        /// </summary>
+        /// <param name="feModel"></param>
+        /// <returns></returns>
         public static List<int> GetAllMaterialIDs(model feModel)
         {
             List<int> matIDs = new List<int>();
-            if (feModel == null) feModel = LibApp.GetDefaultFemapModel();
+            if (feModel == null) feModel = LibApp.GetFemapModel();
             if (feModel != null)
             {
                 Matl matl = feModel.feMatl;
@@ -25,18 +30,24 @@ namespace FemapLib
             }
             return matIDs;
         }
-
-        public static bool HasMaterial(string name,out int id, model feModel = null)
+        /// <summary>
+        /// 尝试根据标题获得材料
+        /// </summary>
+        /// <param name="title">材料标题</param>
+        /// <param name="id">材料id</param>
+        /// <param name="feModel">femap model</param>
+        /// <returns>是否成功</returns>
+        public static bool TryToGetMaterial(string title,out int id, model feModel = null)
         {
             id = -1;
-            if (feModel == null) feModel = LibApp.GetDefaultFemapModel();
+            if (feModel == null) feModel = LibApp.GetFemapModel();
             if (feModel != null)
             {
                 Matl matl = feModel.feMatl;
                 matl.Next();
                 while (LibApp.IsIDValid(matl.ID))
                 {
-                    if(matl.title==name)
+                    if(matl.title==title)
                     {
                         id = matl.ID;
                         return true;
@@ -47,10 +58,10 @@ namespace FemapLib
             return false;
         }
 
-        public static int CreateMaterialFormLib(int idInLib,model feModel=null)
+        public static int CreateMaterialFormLib(int idInLib, zMaterialType matType= zMaterialType.FMT_ISOTROPIC, zLibraryFile libFile= zLibraryFile.FLIB_SYSTEM, model feModel=null)
         {
             int newMatID = -1;
-            if (feModel == null) feModel = LibApp.GetDefaultFemapModel();
+            if (feModel == null) feModel = LibApp.GetFemapModel();
             if (feModel != null)
             {
                 Matl matl = feModel.feMatl;
